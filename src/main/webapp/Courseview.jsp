@@ -47,6 +47,7 @@
 <%} %>
 </table>
 </center>
+<a href="CourseUpdate.jsp" class="btn btn-warning ms-3">Update course</a>
 
 </body>
 </html>
