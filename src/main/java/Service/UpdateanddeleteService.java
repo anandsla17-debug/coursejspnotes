@@ -37,7 +37,34 @@ public String Updatecourselogic(Course course) {
 	}
 	return result;
 }
+
+String delete="delete from course where studentid=?";
+
+public String Deletecourselogic(Course course) {
+	String result=null;
+	try {
+		PreparedStatement ps=conn.prepareStatement(delete);
+		ps.setInt(1, course.getStudentid());
+		int row =ps.executeUpdate();
+		if(row==1) {
+			result="delete";
+		}else {
+			result ="not delete";
+		}
+		
+	} catch (SQLException e) {
+		// TODO: handle exception
+		result=e.getMessage();
+	}
+	
+	
+	return result;
 }
+}
+
+
+
+
 
 //insert into course(studentid,courseid,
 //		coursename,coursedays,coursetime,coursestart,courseend,phone,price)"

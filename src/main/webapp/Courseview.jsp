@@ -48,6 +48,6 @@
 </table>
 </center>
 <a href="CourseUpdate.jsp" class="btn btn-warning ms-3">Update course</a>
-
+<a href="Deletecourse.jsp" class="btn btn-danger ms-3">Delete course</a>
 </body>
 </html>
