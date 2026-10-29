@@ -12,7 +12,7 @@ public class MainController extends HttpServlet{
 	
 	@Override
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException {
-		response.sendRedirect("displayall");
+		response.sendRedirect("AdminLogin.jsp");
 	}
 
 }
