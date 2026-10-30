@@ -9,10 +9,10 @@
 </head>
 <body>
 
-<form class ="container border border-primary p-3 mt-5" style="width: 300px">
+<form  action="Login" method="post" class ="container border border-primary p-3 mt-5" style="width: 300px">
 <p class="h4 text-center">Admin Login</p>
-<input class="form-control mt-2" type="text" placeholder="Enter your Id">
-<input class="form-control mt-2" type="password" placeholder="Enter your password">
+<input class="form-control mt-2" type="text" placeholder="Enter your Id" name="adminid">
+<input class="form-control mt-2" type="password" placeholder="Enter your password" name="adminpassword">
 <button class="btn btn-primary w-100 mt-2">Login</button>
 <p>Do not have an Account ?<a href="AdminRegister.jsp">Sign up</a></p>
 </form>

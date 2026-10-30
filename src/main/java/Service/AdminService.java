@@ -2,6 +2,7 @@ package Service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.Admin;
@@ -30,6 +31,30 @@ public class AdminService {
 			result=e.getMessage();
 		}
 		return result;
+	}
+	
+	String login="select * from admin where adminid=? and adminpassword=?";
+	
+	public String Loginlogic(Admin admin) {
+		String result=null;
+		try {
+			PreparedStatement ps=conn.prepareStatement(login);
+			ps.setString(1, admin.getId());
+			ps.setString(2,admin.getPassword());
+			ResultSet rs=ps.executeQuery();
+			if(rs.next()) {
+				result=rs.getString("adminid")+rs.getString("adminpassword");
+				System.out.println(result);
+				
+			}
+			else {
+				result="login failed";
+			}
+		} catch(SQLException e) {
+			result=e.getMessage();
+		}
+		
+return result;		
 	}
 
 }
