@@ -10,10 +10,15 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-<a href="CourseAdd.jsp" class="btn btn-primary rounded mt-4 ms-3">ADD Course</a>
+<div class="d-flex justify-content-between">
+<a href="CourseAdd.jsp" class="btn btn-primary rounded mt-4 ms-3  " >ADD Course</a>
+
+
+<a href ="AdminLogin.jsp" class="btn btn-danger mt-4 me-2 ">Logout</a>
+</div>
 <center>
 <%ArrayList<Course> courses= (ArrayList<Course>) request.getAttribute("courseview");   %>
-<table border="1">
+<table  class="table table-bordered border-primary  w-75">
 <tr>
 <th>Student id</th>
 <th>Course id</th>
@@ -47,7 +52,7 @@
 <%} %>
 </table>
 </center>
-<a href="CourseUpdate.jsp" class="btn btn-warning ms-3">Update course</a>
-<a href="Deletecourse.jsp" class="btn btn-danger ms-3">Delete course</a>
+<a href="CourseUpdate.jsp" class="btn btn-warning ms-3 mt-2">Update course</a>
+<a href="Deletecourse.jsp" class="btn btn-danger ms-3 mt-2">Delete course</a>
 </body>
 </html>

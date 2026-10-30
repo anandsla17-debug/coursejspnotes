@@ -16,6 +16,10 @@
 <button class="btn btn-primary w-100 mt-2">Login</button>
 <p>Do not have an Account ?<a href="AdminRegister.jsp">Sign up</a></p>
 </form>
+<%String result=(String) request.getAttribute("result"); %>
+<%if(result!=null){ %>
+<p>Result:<%=result %></p>
+<%} %>
 
 </body>
 </html>
